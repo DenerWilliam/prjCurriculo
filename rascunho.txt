@@ -1,1 +1,11 @@
-uv run manage.py startapp professional_experience
+curl -X POST \
+  http://127.0.0.1:8000/api/v1/curriculo/experiences/ \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Token SEU_TOKEN_AQUI' \
+  -d '{
+    "company_name": "Nome da Empresa",
+    "job_title": "Seu Cargo",
+    "start_date": "2020-01-15",
+    "end_date": "2023-12-30",
+    "description": "Responsável pelo desenvolvimento de aplicações web..."
+  }'
